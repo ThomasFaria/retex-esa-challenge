@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.6.40">
 
   <meta name="author" content="Thomas Faria">
-  <meta name="dcterms.date" content="2025-12-03">
+  <meta name="dcterms.date" content="2025-11-03">
   <title>An end-to-end architecture for enhancing reproducibility in nowcasting</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -143,10 +143,167 @@
 </div>
 </div>
 
-  <p class="date">12/03/2025</p>
+  <p class="date">11/03/2025</p>
 </section>
 <section id="context" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Context</h2>
+<ul>
+<li>Participation in the 1st round of nowcasting in 2023<br>
+</li>
+<li>Five statisticians from Insee across different teams:
+<ul>
+<li>2 from economic studies<br>
+</li>
+<li>1 from short-term statistics<br>
+</li>
+<li>2 from the innovation lab<br>
+</li>
+</ul></li>
+<li>Economists (modeling) and data scientists (reproducibility)<br>
+</li>
+<li>Side project with limited time allocation</li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Main objective for Insee</strong></p>
+</div>
+<div class="callout-content">
+<p>Explore new techniques and assess their feasibility for production implementation.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="data-used" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Data Used</h2>
+<ul>
+<li>Reused the exact same pipeline as in 2023, but with different data<br>
+</li>
+<li>Challenge constraint: Only open-source data allowed<br>
+</li>
+<li>Four types of data:
+<ul>
+<li>Macroeconomic data from the Eurostat database<br>
+</li>
+<li>Financial data from the Yahoo database<br>
+</li>
+<li>Google Trends data<br>
+</li>
+<li>Other data sources</li>
+</ul></li>
+</ul>
+</section>
+<section id="models-used" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Models Used</h2>
+<ul>
+<li>Decision to combine both econometric and ML models:
+<ul>
+<li>RegARIMA<br>
+</li>
+<li>Exponential model<br>
+</li>
+<li>Dynamic Factor Models<br>
+</li>
+<li>XGBoost<br>
+</li>
+<li>Long Short-Term Memory (LSTM) model</li>
+</ul></li>
+</ul>
+</section>
+<section id="pros-and-cons" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Pros and cons</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 48%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>ETS</strong></td>
+<td>Simple, interpretable</td>
+<td>Limited external variables</td>
+</tr>
+<tr class="even">
+<td><strong>TRAMO</strong></td>
+<td>Simple, interpretable</td>
+<td>Limited external variables</td>
+</tr>
+<tr class="odd">
+<td><strong>Dynamic Factor Models</strong></td>
+<td>Handles missing values, supports mixed frequencies</td>
+<td>Forecasting is not its primary focus</td>
+</tr>
+<tr class="even">
+<td><strong>LSTM</strong></td>
+<td>Well-suited for time series, captures long-term dependencies</td>
+<td>Slow to run, black box</td>
+</tr>
+<tr class="odd">
+<td><strong>XGBOOST</strong></td>
+<td>Good interpretability, strong performance</td>
+<td>Not suitable for extrapolation</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="a-reproducibility-challenge" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>A Reproducibility Challenge</h2>
+<ul>
+<li><p>A <span class="orange"><strong>reproducibility prize</strong></span> for the challenge<br>
+</p></li>
+<li><p>Reproducibility of project very important in official statistics</p></li>
+<li><p>Gaining expertise in <span class="orange"><strong>good computing practices</strong></span></p>
+<ul>
+<li>Contribution of the <span class="blue2"><strong>Insee Innovation Lab</strong></span> to the challenge</li>
+<li><span class="blue2"><strong>Dissemination</strong></span> within Insee<br>
+</li>
+<li><span class="blue2"><strong>Reuse</strong></span> for internal projects<br>
+</li>
+<li>Highlighting <span class="blue2"><strong>open-source</strong></span> projects</li>
+</ul></li>
+</ul>
+</section>
+<section id="architecture-built" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>🚀 Architecture Built</h2>
+<ul>
+<li><strong>Leveraged SSP Cloud</strong> for computation and storage<br>
+</li>
+<li><strong>Chose R over Python</strong> to enhance reusability within Insee<br>
+</li>
+<li><strong>Tech stack designed for maximum reproducibility</strong> 📌:
+<ul>
+<li>🏗 <strong>Git &amp; GitHub</strong> for version control<br>
+</li>
+<li>📦 <strong>renv</strong> to manage R libraries<br>
+</li>
+<li>📁 <strong>Structured project workflow</strong> with <code>{targets}</code> pipelines<br>
+</li>
+<li>🐳 <strong>Docker</strong> for environment portability<br>
+</li>
+<li>🤖 <strong>Automation</strong> using GitHub Actions</li>
+</ul></li>
+</ul>
+</section>
+<section id="architecture-built-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Architecture built</h2>
+<p>TO BE ADDED</p>
+</section>
+<section id="final-output-an-interactive-website" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Final output : an interactive website</h2>
+<ul>
+<li>Making the results available through an interactive website <a href="https://inseefrlab.github.io/ESA-Nowcasting-2023/ppi.html">Click Here</a></li>
+</ul>
 
 
 </section>
