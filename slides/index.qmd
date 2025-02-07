@@ -1,2 +1,75 @@
 
-## Context
+## Context  
+
+- Participation in the 1st round of nowcasting in 2023  
+- Five statisticians from Insee across different teams:  
+  - 2 from economic studies  
+  - 1 from short-term statistics  
+  - 2 from the innovation lab  
+- Economists (modeling) and data scientists (reproducibility)  
+- Side project with limited time allocation  
+
+::: {.callout-tip}  
+## Main objective for Insee 
+Explore new techniques and assess their feasibility for production implementation.  
+:::  
+
+## Data Used  
+
+- Reused the exact same pipeline as in 2023, but with different data  
+- Challenge constraint: Only open-source data allowed  
+- Four types of data:  
+  - Macroeconomic data from the Eurostat database  
+  - Financial data from the Yahoo database  
+  - Google Trends data  
+  - Other data sources  
+
+## Models Used  
+
+- Decision to combine both econometric and ML models:  
+  - RegARIMA  
+  - Exponential model  
+  - Dynamic Factor Models  
+  - XGBoost  
+  - Long Short-Term Memory (LSTM) model  
+
+## Pros and cons 
+
+| Model         | Pros                                              | Cons                                  |
+|--------------|--------------------------------------------------|---------------------------------------|
+| **ETS**      | Simple, interpretable                           | Limited external variables           |
+| **TRAMO**    | Simple, interpretable | Limited external variables |
+| **Dynamic Factor Models**    | Handles missing values, supports mixed frequencies | Forecasting is not its primary focus |
+| **LSTM**  | Well-suited for time series, captures long-term dependencies | Slow to run, black box |
+| **XGBOOST**     | Good interpretability, strong performance       | Not suitable for extrapolation       |
+
+## A Reproducibility Challenge
+
+- A [**reproducibility prize**]{.orange} for the challenge  
+- Reproducibility of project very important in official statistics
+
+- Gaining expertise in [**good computing practices**]{.orange}  
+  + Contribution of the [**Insee Innovation Lab**]{.blue2} to the challenge 
+  + [**Dissemination**]{.blue2} within Insee  
+  + [**Reuse**]{.blue2} for internal projects  
+  + Highlighting [**open-source**]{.blue2} projects  
+
+
+## 🚀 Architecture Built  
+
+- **Leveraged SSP Cloud** for computation and storage  
+- **Chose R over Python** to enhance reusability within Insee  
+- **Tech stack designed for maximum reproducibility** 📌:  
+  - 🏗 **Git & GitHub** for version control  
+  - 📦 **renv** to manage R libraries  
+  - 📁 **Structured project workflow** with `{targets}` pipelines  
+  - 🐳 **Docker** for environment portability  
+  - 🤖 **Automation** using GitHub Actions  
+
+## Architecture built
+
+TO BE ADDED 
+
+## Final output : an interactive website
+
+- Making the results available through an interactive website [Click Here](https://inseefrlab.github.io/ESA-Nowcasting-2023/ppi.html)
