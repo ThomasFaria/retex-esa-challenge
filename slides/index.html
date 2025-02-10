@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
-  <meta name="author" content="Thomas Faria">
+  <meta name="author" content="Yves-Laurent Benichou, Thomas Faria, Antoine Palazzolo">
   <meta name="dcterms.date" content="2025-11-03">
   <title>An end-to-end architecture for enhancing reproducibility in nowcasting</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -138,7 +138,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-<strong><span class="blue2">Thomas Faria</span></strong> 
+<span class="orange"><strong>Yves-Laurent Benichou</strong></span>, <strong><span class="blue2">Thomas Faria</span></strong>, <span class="orange"><strong>Antoine Palazzolo</strong></span> 
 </div>
 </div>
 </div>
@@ -148,20 +148,15 @@
 <section id="context" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Context</h2>
 <ul>
-<li>Participation in the 1st round of nowcasting in 2023<br>
-</li>
-<li>Five statisticians from Insee across different teams:
+<li>Participation in the <span class="orange"><strong>1st round</strong></span> of nowcasting in 2023</li>
+<li>Five statisticians from Insee across <span class="orange"><strong>different teams</strong></span>:
 <ul>
-<li>2 from economic studies<br>
-</li>
-<li>1 from short-term statistics<br>
-</li>
-<li>2 from the innovation lab<br>
-</li>
+<li>2 from <span class="blue2"><strong>economic studies</strong></span> (I. Moutachaker, A. Q-L-T)</li>
+<li>1 from <span class="blue2"><strong>short-term statistics</strong></span> (P. Leblanc)</li>
+<li>2 from the <span class="blue2"><strong>innovation lab</strong></span> (A. Palazzolo, T. Faria)</li>
 </ul></li>
-<li>Economists (modeling) and data scientists (reproducibility)<br>
-</li>
-<li>Side project with limited time allocation</li>
+<li>Economists (models) and data scientists (reproducibility)</li>
+<li><span class="orange"><strong>Side project</strong></span> with limited time allocation</li>
 </ul>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -180,36 +175,27 @@
 <section id="data-used" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Data Used</h2>
 <ul>
-<li>Reused the exact same pipeline as in 2023, but with different data<br>
-</li>
-<li>Challenge constraint: Only open-source data allowed<br>
-</li>
+<li>Reused the exact <span class="orange"><strong>same pipeline</strong></span> as in 2023, but with <span class="orange"><strong>different data</strong></span></li>
+<li>Challenge constraint: Only <span class="orange"><strong>open-source data</strong></span> allowed</li>
 <li>Four types of data:
 <ul>
-<li>Macroeconomic data from the Eurostat database<br>
-</li>
-<li>Financial data from the Yahoo database<br>
-</li>
-<li>Google Trends data<br>
-</li>
-<li>Other data sources</li>
+<li><span class="blue2"><strong>Macroeconomic</strong></span> data from the Eurostat database</li>
+<li><span class="blue2"><strong>Financial</strong></span> data from the Yahoo database</li>
+<li><span class="blue2"><strong>Google Trends</strong></span> data</li>
+<li><span class="blue2"><strong>Other data</strong></span> sources</li>
 </ul></li>
 </ul>
 </section>
 <section id="models-used" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Models Used</h2>
 <ul>
-<li>Decision to combine both econometric and ML models:
+<li>Decision to combine both <span class="orange"><strong>econometric</strong></span> and <span class="green2"><strong>ML</strong></span> models:
 <ul>
-<li>RegARIMA<br>
-</li>
-<li>Exponential model<br>
-</li>
-<li>Dynamic Factor Models<br>
-</li>
-<li>XGBoost<br>
-</li>
-<li>Long Short-Term Memory (LSTM) model</li>
+<li><span class="orange"><strong>RegARIMA</strong></span></li>
+<li><span class="orange"><strong>Exponential model</strong></span></li>
+<li><span class="blue2"><strong>Dynamic Factor Models</strong></span></li>
+<li><span class="green2"><strong>XGBoost</strong></span></li>
+<li><span class="green2"><strong>Long Short-Term Memory</strong></span> (LSTM) model</li>
 </ul></li>
 </ul>
 </section>
@@ -230,27 +216,22 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>ETS</strong></td>
+<td><span class="orange"><strong>ETS</strong></span> &amp; <span class="orange"><strong>TRAMO</strong></span></td>
 <td>Simple, interpretable</td>
 <td>Limited external variables</td>
 </tr>
 <tr class="even">
-<td><strong>TRAMO</strong></td>
-<td>Simple, interpretable</td>
-<td>Limited external variables</td>
-</tr>
-<tr class="odd">
-<td><strong>Dynamic Factor Models</strong></td>
+<td><span class="blue2"><strong>Dynamic Factor Models</strong></span></td>
 <td>Handles missing values, supports mixed frequencies</td>
 <td>Forecasting is not its primary focus</td>
 </tr>
-<tr class="even">
-<td><strong>LSTM</strong></td>
+<tr class="odd">
+<td><span class="green2"><strong>LSTM</strong></span></td>
 <td>Well-suited for time series, captures long-term dependencies</td>
 <td>Slow to run, black box</td>
 </tr>
-<tr class="odd">
-<td><strong>XGBOOST</strong></td>
+<tr class="even">
+<td><span class="green2"><strong>XGBOOST</strong></span></td>
 <td>Good interpretability, strong performance</td>
 <td>Not suitable for extrapolation</td>
 </tr>
@@ -277,27 +258,31 @@
 <section id="architecture-built" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>🚀 Architecture Built</h2>
 <ul>
-<li><strong>Leveraged SSP Cloud</strong> for computation and storage<br>
+<li><span class="orange"><strong>Leveraged SSP Cloud</strong></span> for computation and storage<br>
 </li>
-<li><strong>Chose R over Python</strong> to enhance reusability within Insee<br>
+<li><span class="orange"><strong>Chose R over Python</strong></span> to enhance reusability within Insee<br>
 </li>
-<li><strong>Tech stack designed for maximum reproducibility</strong> 📌:
+<li>Tech stack designed for maximum reproducibility 📌:
 <ul>
-<li>🏗 <strong>Git &amp; GitHub</strong> for version control<br>
+<li>🏗 <span class="blue2"><strong>Git &amp; GitHub</strong></span> for version control<br>
 </li>
-<li>📦 <strong>renv</strong> to manage R libraries<br>
+<li>📦 <span class="blue2"><strong>renv</strong></span> to manage R libraries<br>
 </li>
-<li>📁 <strong>Structured project workflow</strong> with <code>{targets}</code> pipelines<br>
+<li>📁 <span class="blue2"><strong>Structured project workflow</strong></span> with <code>{targets}</code> pipelines<br>
 </li>
-<li>🐳 <strong>Docker</strong> for environment portability<br>
+<li>🐳 <span class="blue2"><strong>Docker</strong></span> for environment portability<br>
 </li>
-<li>🤖 <strong>Automation</strong> using GitHub Actions</li>
+<li>🤖 <span class="blue2"><strong>Automation</strong></span> using GitHub Actions</li>
 </ul></li>
 </ul>
 </section>
 <section id="architecture-built-1" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Architecture built</h2>
-<p>TO BE ADDED</p>
+
+<img data-src="img/nowcasting-diag-en.drawio.png" class="r-stretch"></section>
+<section id="automation-using-github-actions" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>🤖 Automation using Github Actions</h2>
+<p><img data-src="img/workflow-example.png" class="absolute" style="top: 200px; left: 30px; "></p>
 </section>
 <section id="final-output-an-interactive-website" class="slide level2" data-background-image="background.svg" data-background-size="contain">
 <h2>Final output : an interactive website</h2>

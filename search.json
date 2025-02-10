@@ -4,28 +4,28 @@
     "href": "slides/index.html#context",
     "title": "An end-to-end architecture for enhancing reproducibility in nowcasting",
     "section": "Context",
-    "text": "Context\n\nParticipation in the 1st round of nowcasting in 2023\n\nFive statisticians from Insee across different teams:\n\n2 from economic studies\n\n1 from short-term statistics\n\n2 from the innovation lab\n\n\nEconomists (modeling) and data scientists (reproducibility)\n\nSide project with limited time allocation\n\n\n\n\n\n\n\nMain objective for Insee\n\n\nExplore new techniques and assess their feasibility for production implementation."
+    "text": "Context\n\nParticipation in the 1st round of nowcasting in 2023\nFive statisticians from Insee across different teams:\n\n2 from economic studies (I. Moutachaker, A. Q-L-T)\n1 from short-term statistics (P. Leblanc)\n2 from the innovation lab (A. Palazzolo, T. Faria)\n\nEconomists (models) and data scientists (reproducibility)\nSide project with limited time allocation\n\n\n\n\n\n\n\nMain objective for Insee\n\n\nExplore new techniques and assess their feasibility for production implementation."
   },
   {
     "objectID": "slides/index.html#data-used",
     "href": "slides/index.html#data-used",
     "title": "An end-to-end architecture for enhancing reproducibility in nowcasting",
     "section": "Data Used",
-    "text": "Data Used\n\nReused the exact same pipeline as in 2023, but with different data\n\nChallenge constraint: Only open-source data allowed\n\nFour types of data:\n\nMacroeconomic data from the Eurostat database\n\nFinancial data from the Yahoo database\n\nGoogle Trends data\n\nOther data sources"
+    "text": "Data Used\n\nReused the exact same pipeline as in 2023, but with different data\nChallenge constraint: Only open-source data allowed\nFour types of data:\n\nMacroeconomic data from the Eurostat database\nFinancial data from the Yahoo database\nGoogle Trends data\nOther data sources"
   },
   {
     "objectID": "slides/index.html#models-used",
     "href": "slides/index.html#models-used",
     "title": "An end-to-end architecture for enhancing reproducibility in nowcasting",
     "section": "Models Used",
-    "text": "Models Used\n\nDecision to combine both econometric and ML models:\n\nRegARIMA\n\nExponential model\n\nDynamic Factor Models\n\nXGBoost\n\nLong Short-Term Memory (LSTM) model"
+    "text": "Models Used\n\nDecision to combine both econometric and ML models:\n\nRegARIMA\nExponential model\nDynamic Factor Models\nXGBoost\nLong Short-Term Memory (LSTM) model"
   },
   {
     "objectID": "slides/index.html#pros-and-cons",
     "href": "slides/index.html#pros-and-cons",
     "title": "An end-to-end architecture for enhancing reproducibility in nowcasting",
     "section": "Pros and cons",
-    "text": "Pros and cons\n\n\n\n\n\n\n\n\nModel\nPros\nCons\n\n\n\n\nETS\nSimple, interpretable\nLimited external variables\n\n\nTRAMO\nSimple, interpretable\nLimited external variables\n\n\nDynamic Factor Models\nHandles missing values, supports mixed frequencies\nForecasting is not its primary focus\n\n\nLSTM\nWell-suited for time series, captures long-term dependencies\nSlow to run, black box\n\n\nXGBOOST\nGood interpretability, strong performance\nNot suitable for extrapolation"
+    "text": "Pros and cons\n\n\n\n\n\n\n\n\nModel\nPros\nCons\n\n\n\n\nETS & TRAMO\nSimple, interpretable\nLimited external variables\n\n\nDynamic Factor Models\nHandles missing values, supports mixed frequencies\nForecasting is not its primary focus\n\n\nLSTM\nWell-suited for time series, captures long-term dependencies\nSlow to run, black box\n\n\nXGBOOST\nGood interpretability, strong performance\nNot suitable for extrapolation"
   },
   {
     "objectID": "slides/index.html#a-reproducibility-challenge",
@@ -46,7 +46,14 @@
     "href": "slides/index.html#architecture-built-1",
     "title": "An end-to-end architecture for enhancing reproducibility in nowcasting",
     "section": "Architecture built",
-    "text": "Architecture built\nTO BE ADDED"
+    "text": "Architecture built"
+  },
+  {
+    "objectID": "slides/index.html#automation-using-github-actions",
+    "href": "slides/index.html#automation-using-github-actions",
+    "title": "An end-to-end architecture for enhancing reproducibility in nowcasting",
+    "section": "🤖 Automation using Github Actions",
+    "text": "🤖 Automation using Github Actions"
   },
   {
     "objectID": "slides/index.html#final-output-an-interactive-website",
