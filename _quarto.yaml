@@ -5,7 +5,7 @@ project:
 
 title:  An end-to-end architecture for enhancing reproducibility in nowcasting
 author:
-    - name: "**[Thomas Faria]{.blue2}**"
+    - name: "[**Yves-Laurent Benichou**]{.orange}, **[Thomas Faria]{.blue2}**, [**Antoine Palazzolo**]{.orange}"
       # email: thomas.faria@insee.fr
       # affiliations:
       #   - name: "[__Insee__]{.orange}"

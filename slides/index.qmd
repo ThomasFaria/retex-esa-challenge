@@ -1,47 +1,46 @@
 
-## Context  
+## Context
 
-- Participation in the 1st round of nowcasting in 2023  
-- Five statisticians from Insee across different teams:  
-  - 2 from economic studies  
-  - 1 from short-term statistics  
-  - 2 from the innovation lab  
-- Economists (modeling) and data scientists (reproducibility)  
-- Side project with limited time allocation  
+- Participation in the [**1st round**]{.orange} of nowcasting in 2023
+- Five statisticians from Insee across [**different teams**]{.orange}:
+  - 2 from [**economic studies**]{.blue2} (I. Moutachaker, A. Q-L-T)
+  - 1 from [**short-term statistics**]{.blue2} (P. Leblanc)
+  - 2 from the [**innovation lab**]{.blue2} (A. Palazzolo, T. Faria)
+- Economists (models) and data scientists (reproducibility)
+- [**Side project**]{.orange} with limited time allocation
 
-::: {.callout-tip}  
-## Main objective for Insee 
-Explore new techniques and assess their feasibility for production implementation.  
-:::  
+::: {.callout-tip}
+## Main objective for Insee
+Explore new techniques and assess their feasibility for production implementation.
+:::
 
-## Data Used  
+## Data Used
 
-- Reused the exact same pipeline as in 2023, but with different data  
-- Challenge constraint: Only open-source data allowed  
-- Four types of data:  
-  - Macroeconomic data from the Eurostat database  
-  - Financial data from the Yahoo database  
-  - Google Trends data  
-  - Other data sources  
+- Reused the exact [**same pipeline**]{.orange} as in 2023, but with [**different data**]{.orange}
+- Challenge constraint: Only [**open-source data**]{.orange} allowed
+- Four types of data:
+  - [**Macroeconomic**]{.blue2} data from the Eurostat database
+  - [**Financial**]{.blue2} data from the Yahoo database
+  - [**Google Trends**]{.blue2} data
+  - [**Other data**]{.blue2} sources
 
-## Models Used  
+## Models Used
 
-- Decision to combine both econometric and ML models:  
-  - RegARIMA  
-  - Exponential model  
-  - Dynamic Factor Models  
-  - XGBoost  
-  - Long Short-Term Memory (LSTM) model  
+- Decision to combine both [**econometric**]{.orange} and [**ML**]{.green2} models:
+  - [**RegARIMA**]{.orange}
+  - [**Exponential model**]{.orange}
+  - [**Dynamic Factor Models**]{.blue2}
+  - [**XGBoost**]{.green2}
+  - [**Long Short-Term Memory**]{.green2} (LSTM) model
 
-## Pros and cons 
+## Pros and cons
 
 | Model         | Pros                                              | Cons                                  |
 |--------------|--------------------------------------------------|---------------------------------------|
-| **ETS**      | Simple, interpretable                           | Limited external variables           |
-| **TRAMO**    | Simple, interpretable | Limited external variables |
-| **Dynamic Factor Models**    | Handles missing values, supports mixed frequencies | Forecasting is not its primary focus |
-| **LSTM**  | Well-suited for time series, captures long-term dependencies | Slow to run, black box |
-| **XGBOOST**     | Good interpretability, strong performance       | Not suitable for extrapolation       |
+| [**ETS**]{.orange} &  [**TRAMO**]{.orange}    | Simple, interpretable                           | Limited external variables           |
+| [**Dynamic Factor Models**]{.blue2}    | Handles missing values, supports mixed frequencies | Forecasting is not its primary focus |
+| [**LSTM**]{.green2}  | Well-suited for time series, captures long-term dependencies | Slow to run, black box |
+| [**XGBOOST**]{.green2}     | Good interpretability, strong performance       | Not suitable for extrapolation       |
 
 ## A Reproducibility Challenge
 
@@ -57,18 +56,23 @@ Explore new techniques and assess their feasibility for production implementatio
 
 ## 🚀 Architecture Built  
 
-- **Leveraged SSP Cloud** for computation and storage  
-- **Chose R over Python** to enhance reusability within Insee  
-- **Tech stack designed for maximum reproducibility** 📌:  
-  - 🏗 **Git & GitHub** for version control  
-  - 📦 **renv** to manage R libraries  
-  - 📁 **Structured project workflow** with `{targets}` pipelines  
-  - 🐳 **Docker** for environment portability  
-  - 🤖 **Automation** using GitHub Actions  
+- [**Leveraged SSP Cloud**]{.orange} for computation and storage  
+- [**Chose R over Python**]{.orange} to enhance reusability within Insee  
+- Tech stack designed for maximum reproducibility 📌:  
+  - 🏗 [**Git & GitHub**]{.blue2} for version control  
+  - 📦 [**renv**]{.blue2} to manage R libraries  
+  - 📁 [**Structured project workflow**]{.blue2} with `{targets}` pipelines  
+  - 🐳 [**Docker**]{.blue2} for environment portability  
+  - 🤖 [**Automation**]{.blue2} using GitHub Actions  
 
 ## Architecture built
 
-TO BE ADDED 
+![](img/nowcasting-diag-en.drawio.png)
+
+## 🤖 Automation using Github Actions
+
+![](img/workflow-example.png){.absolute top=200 left=30}
+
 
 ## Final output : an interactive website
 
