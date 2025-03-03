@@ -33,15 +33,6 @@ Explore new techniques and assess their feasibility for production implementatio
   - [**XGBoost**]{.green2}
   - [**Long Short-Term Memory**]{.green2} (LSTM) model
 
-## Pros and cons
-
-| Model         | Pros                                              | Cons                                  |
-|--------------|--------------------------------------------------|---------------------------------------|
-| [**ETS**]{.orange} &  [**TRAMO**]{.orange}    | Simple, interpretable                           | Limited external variables           |
-| [**Dynamic Factor Models**]{.blue2}    | Handles missing values, supports mixed frequencies | Forecasting is not its primary focus |
-| [**LSTM**]{.green2}  | Well-suited for time series, captures long-term dependencies | Slow to run, black box |
-| [**XGBOOST**]{.green2}     | Good interpretability, strong performance       | Not suitable for extrapolation       |
-
 ## A Reproducibility Challenge
 
 - A [**reproducibility prize**]{.orange} for the challenge  
