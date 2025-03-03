@@ -21,13 +21,6 @@
     "text": "Models Used\n\nDecision to combine both econometric and ML models:\n\nRegARIMA\nExponential model\nDynamic Factor Models\nXGBoost\nLong Short-Term Memory (LSTM) model"
   },
   {
-    "objectID": "slides/index.html#pros-and-cons",
-    "href": "slides/index.html#pros-and-cons",
-    "title": "An end-to-end architecture for enhancing reproducibility in nowcasting",
-    "section": "Pros and cons",
-    "text": "Pros and cons\n\n\n\n\n\n\n\n\nModel\nPros\nCons\n\n\n\n\nETS & TRAMO\nSimple, interpretable\nLimited external variables\n\n\nDynamic Factor Models\nHandles missing values, supports mixed frequencies\nForecasting is not its primary focus\n\n\nLSTM\nWell-suited for time series, captures long-term dependencies\nSlow to run, black box\n\n\nXGBOOST\nGood interpretability, strong performance\nNot suitable for extrapolation"
-  },
-  {
     "objectID": "slides/index.html#a-reproducibility-challenge",
     "href": "slides/index.html#a-reproducibility-challenge",
     "title": "An end-to-end architecture for enhancing reproducibility in nowcasting",
